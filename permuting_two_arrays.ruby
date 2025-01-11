@@ -6,13 +6,12 @@
 # int A[n]: an array of integers
 # int B[n]: an array of integers
 
+
 def twoArrays(k, a, b)
   # Write your code here
-array_a = a.sort
-array_b = b.sort.reverse
 result = []
-array_a.each_with_index do |number, index|
-  result << number + array_b[index]
+a.sort.each_with_index do |number, index|
+  result << number + b.sort.reverse[index]
 end
 result.all?{|x| x >= k } ? "YES" : "NO"
 end
